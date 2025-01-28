@@ -49,7 +49,8 @@ pico_enable_stdio_usb(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech 1)
 
 # Add the standard library to the build
 target_link_libraries(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech
-        pico_stdlib)
+        pico_stdlib
+)
 
 # Add the standard include files to the build
 target_include_directories(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech PRIVATE
@@ -59,6 +60,7 @@ target_include_directories(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech PRIVATE
 # Add any user requested libraries
 target_link_libraries(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech 
         hardware_pio
+        hardware_timer
         )
 
 pico_add_extra_outputs(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech)
