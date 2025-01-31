@@ -35,7 +35,11 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech main.c )
+add_executable(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech 
+    main.c
+    src/utils/leds.c
+    src/draws/numbers0_9.c
+)
 
 pico_set_program_name(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech "Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech")
 pico_set_program_version(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech "0.1")
@@ -55,6 +59,9 @@ target_link_libraries(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech
 # Add the standard include files to the build
 target_include_directories(Debolcing_Leds_e_Botoes_U4C4-EmbarcaTech PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
+        ${CMAKE_CURRENT_LIST_DIR}/includes/
+        ${CMAKE_CURRENT_LIST_DIR}/includes/utils/
+        ${CMAKE_CURRENT_LIST_DIR}/includes/draws/
 )
 
 # Add any user requested libraries
