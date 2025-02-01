@@ -105,12 +105,12 @@ void gpio_irq_handler(uint gpio, uint32_t events){
         last_time = current_time;
 
         //Verifica se o botão A foi pressionado
-        if (gpio_get(PIN_BUTTON_A)){
+        if (gpio_get(PIN_BUTTON_A) == 0){
             //Incrementa o índice do número a ser exibido
             index++;
         }
         //Verifica se o botão B foi pressionado
-        if (gpio_get(PIN_BUTTON_B)){
+        if (gpio_get(PIN_BUTTON_B) == 0){
             //Decrementa o índice do número a ser exibido
             index--;
         }
