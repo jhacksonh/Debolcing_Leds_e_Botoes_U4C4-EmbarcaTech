@@ -23,18 +23,16 @@ uint8_t framesNums0_9[11][15] = { // Frames dos números de 0 a 9 e tamanhos de 
 int lenNumFrames = sizeof(framesNums0_9)/sizeof(framesNums0_9[0]); // Tamanho do array framesNums0_9
 uint8_t colorsFrames[10][15][3];// Matriz de cores para os frames
 
-// Gera uma matriz de cores para os frames dos números de 0 a 9
-// Cada cor é representada por um vetor de 3 posições (RGB)
-// A cor é escolhida para ser azul (0,13,80) para todos os pixels
+// Gera uma matriz de cores para os números de 0 a 9, com cor azul (0,25,200) para todos os pixels.
 void ColorsGenerate(){
     // Itera sobre os frames
     for (int colorsLen = 0; colorsLen < lenNumFrames-1; colorsLen++) {
         // Itera sobre os pixels de cada frame
-        for (int frameLen= 0; frameLen< framesNums0_9[lenNumFrames-1][colorsLen]; frameLen++) {
+        for (int frameLen= 0; frameLen<framesNums0_9[lenNumFrames-1][colorsLen]; frameLen++) {
             // Define a cor para cada pixel
             colorsFrames[colorsLen][frameLen][0] = 0; // Vermelho
-            colorsFrames[colorsLen][frameLen][1] = 13; // Verde
-            colorsFrames[colorsLen][frameLen][2] = 80; // Azul
+            colorsFrames[colorsLen][frameLen][1] = 25; // Verde
+            colorsFrames[colorsLen][frameLen][2] = 200; // Azul
         }
     }
 }
