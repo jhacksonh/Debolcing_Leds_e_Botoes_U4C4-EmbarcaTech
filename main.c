@@ -11,7 +11,7 @@
 #define PIN_BUTTON_B 6 // Pino do botão B
 #define PIN_LEDS 7 // Pino dos LEDs
 #define LED_COUNT 25 // Quantidade de LEDs na matriz
-#define TIME_PIN_LED_R 1000/5 // Tempo em microsegundos para piscar o LED vermelho
+#define TIME_PIN_LED_R (1000/5)/2 // Tempo em microsegundos para piscar o LED vermelho
 static uint32_t last_time = 0; // Variável para armazenar o tempo da última interrupção
 static int index = 0; // Variável para armazenar o índice do número a ser exibido
 
